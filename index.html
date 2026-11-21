@@ -336,7 +336,7 @@ S.body=S.body||'Hatchback';S.set=Object.assign({fov:75,dist:14,h:6.5,vol:.7,q:'H
 if(!S.g){const ow=S.owned||[];S.g={car:'Comet',col:COLS.some(c=>c[0]===S.car)?S.car:'Blue',dec:'None',ant:'None',whl:'Standard',fl:FLMS.some(f=>f[0]===S.flame)?S.flame:'Orange'};
   S.inv=['car:Comet','col:Blue','col:Crimson','col:Lime','dec:None','ant:None','whl:Standard','fl:Orange'];
   ow.forEach(x=>{const q=x.split(':');if(q[0]==='car')S.inv.push('col:'+q[1]);if(q[0]==='flame')S.inv.push('fl:'+q[1])})}
-S.drops=S.drops||[];S.xp=S.xp||0;S.pc=S.pc||[0,0,0,0,0];S.adm=S.adm||'1337';if(S.anthem===undefined)S.anthem='Victory Fanfare';S.friends=S.friends.map(f=>f.n||f);if(!S.owned.includes('body:Hatchback'))S.owned.push('body:Hatchback');
+S.drops=S.drops||[];S.xp=S.xp||0;S.pc=S.pc||[0,0,0,0,0];S.adm=S.adm||'car';if(S.anthem===undefined)S.anthem='Victory Fanfare';S.friends=S.friends.map(f=>f.n||f);if(!S.owned.includes('body:Hatchback'))S.owned.push('body:Hatchback');
 const day=()=>new Date().toDateString(),yday=()=>new Date(Date.now()-864e5).toDateString();
 const dnow=()=>S.last!==day()?(S.last===yday()?S.streak%7:0):S.streak;
 const isOnline=n=>!!(S.name&&n&&(RM?peers.some(p=>p.presence.n===n):false));
